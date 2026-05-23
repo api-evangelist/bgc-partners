@@ -1,0 +1,68 @@
+name: BGC Group Rate Limits
+description: |
+  Rate-limit and throughput posture for BGC Group's institutional electronic surfaces. BGC's execution
+  venues are session-oriented and bandwidth-bounded rather than HTTP-API-rate-limited; quoted policies are
+  inferred from the publicly described protocol stacks (FIX, ITCH/OUCH/SoupBinTCP, BOP/BIMP) and confirmed
+  via documentation links. Specific message-rate ceilings are distributed under NDA to onboarded members.
+url: https://github.com/api-evangelist/bgc-partners/blob/main/rate-limits/bgc-partners-rate-limits.yml
+specificationVersion: API Commons Rate Limits 0.1
+created: '2026-05-23'
+modified: '2026-05-23'
+provider:
+  name: BGC Group, Inc.
+  url: https://www.bgcg.com
+
+policies:
+  - id: fmx-ust-fix-session
+    surface: FMX UST FIX 4.4 order entry
+    policyType: Session throughput
+    description: |
+      Point-to-point TCP/IP FIX session per participant. Order entry, throttling, message-rate ceilings,
+      and queue-depth limits are governed by exchange rules and the participant agreement, not by a public
+      HTTP rate limit. Cancellation and mass-cancel behaviors follow FIX 4.4 with selected FIX 5.0 tags.
+    publishedLimit: false
+    documentation: https://www.fenicsust.com/technology/
+  - id: fmx-ust-bop-binary
+    surface: FMX UST BOP (Binary Order Protocol)
+    policyType: Session throughput
+    description: |
+      Proprietary binary order entry over TCP. Per-session and per-firm throttles are configured at
+      onboarding. Disorderly behavior triggers exchange-side circuit breakers and connection drops.
+    publishedLimit: false
+    documentation: https://www.fenicsust.com/technology/
+  - id: fmx-ust-bimp-multicast
+    surface: FMX UST BIMP market data
+    policyType: Bandwidth provisioning
+    description: |
+      Real-time market data over multicast. Capacity is provisioned by network rather than rate-limited;
+      packet loss / sequence gaps are recovered through retransmission services per exchange spec.
+    publishedLimit: false
+    documentation: https://www.fenicsust.com/technology/
+  - id: fenics-fx-itch
+    surface: Fenics FX ITCH market data
+    policyType: Single-TCP session throughput
+    description: |
+      ITCH-over-SoupBinTCP feed delivered over a single TCP/IP connection per client; quote update volumes
+      depend on subscribed instruments. Heartbeat and session recovery are governed by SoupBinTCP.
+    publishedLimit: false
+    documentation: https://www.fenicsfx.com/wp-content/uploads/2019/09/FenicsFX_ITCH_MarketData_v7.pdf
+  - id: fenics-md-direct-feed
+    surface: Fenics Market Data Direct Feed / API
+    policyType: Subscription entitlement
+    description: |
+      Throughput governed by entitlement tier and delivery channel (FIX/API, FTP/SFTP, Cloud, On-prem
+      server). Snapshot vs streaming behavior and history retrieval pacing are set per licensed package.
+    publishedLimit: false
+    documentation: https://www.fenicsmd.com/delivery/direct-feed-and-api/
+  - id: lucera-single-api
+    surface: LumeMarkets single-API aggregator
+    policyType: Platform-level throughput
+    description: |
+      Cross-asset aggregation API across FX, Rates, Futures, Crypto and Credit. Throughput is provisioned
+      per tenant with the underlying venues' message-rate limits passed through.
+    publishedLimit: false
+    documentation: https://www.lucera.com
+
+notes:
+  - No publicly documented HTTP-style requests-per-second limits exist for any BGC surface; rate posture is governed by FIX/binary session contracts and bandwidth provisioning.
+  - Members and data subscribers receive concrete throttles, fair-access rules and burst allowances in their participant or license agreements.

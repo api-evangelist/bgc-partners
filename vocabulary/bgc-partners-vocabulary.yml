@@ -1,0 +1,113 @@
+name: BGC Group Vocabulary
+description: |
+  Domain vocabulary for BGC Group, Inc. (NASDAQ: BGC) — global brokerage and financial technology firm —
+  capturing terms across inter-dealer brokerage, electronic execution venues, market data distribution,
+  post-trade optimization, and trading infrastructure. Terms are organized by domain and grounded in BGC's
+  public business descriptions of FMX, Fenics, Lucera, Capitalab, and GFI Group.
+url: https://github.com/api-evangelist/bgc-partners/blob/main/vocabulary/bgc-partners-vocabulary.yml
+created: '2026-05-23'
+modified: '2026-05-23'
+
+domains:
+  - name: Corporate Structure
+    terms:
+      - term: BGC Group
+        definition: NASDAQ-listed (BGC) holding company; renamed from BGC Partners in 2023 following a corporate reorganization.
+      - term: BGC Partners
+        definition: Former name of BGC Group, retained for historical and brand references.
+      - term: Newmark Group
+        definition: Real-estate services subsidiary spun off from BGC on November 30, 2018; trades as NASDAQ:NMRK.
+      - term: GFI Group
+        definition: Inter-dealer broker subsidiary owned by BGC, providing voice and electronic brokerage in OTC and listed markets.
+      - term: FMX Holdings
+        definition: Subsidiary holding the FMX division, with equity participation from ten leading banks and market-making firms.
+      - term: Equity Partner
+        definition: A bank or market-maker holding equity in FMX Holdings, including BofA, Barclays, Citadel Securities, Citi, Goldman Sachs, JPMorgan, Jump Trading, Morgan Stanley, Tower Research and Wells Fargo.
+
+  - name: Brokerage And Execution
+    terms:
+      - term: Inter-Dealer Broker
+        definition: A firm that intermediates trades between large financial institutions in OTC markets without taking proprietary risk in the same way as a dealer.
+      - term: Voice Broking
+        definition: Trade execution conducted by human brokers over the phone or chat for less liquid or bespoke instruments.
+      - term: Electronic Broking
+        definition: Fully electronic, often anonymous, order matching across an electronic order book.
+      - term: Hybrid Execution
+        definition: Combined voice and electronic workflows where electronic price discovery is paired with broker assistance.
+      - term: Central Limit Order Book
+        definition: A continuous electronic order book aggregating bids and offers at multiple price levels; used by FMX UST with 10 price levels of depth.
+
+  - name: FMX Venues
+    terms:
+      - term: FMX Futures Exchange
+        definition: BGC's CFTC-regulated futures exchange that launched September 23, 2024 with SOFR futures and added U.S. Treasury futures in Q1 2025.
+      - term: FMX UST
+        definition: Electronic central-limit-order-book venue for U.S. Treasuries (formerly Fenics UST), connecting via FIX 4.4 and proprietary BOP/BIMP protocols.
+      - term: FMX FX
+        definition: Electronic foreign exchange venue (operating as Fenics FX) covering Spot, Forwards, NDFs and Options via FIX and ITCH/OUCH.
+      - term: LCH Limited
+        definition: London Clearing House Ltd — CFTC-registered Derivatives Clearing Organization that clears FMX Futures Exchange trades and offers cross-margining with cleared IRS.
+
+  - name: Connectivity Protocols
+    terms:
+      - term: FIX Protocol
+        definition: Financial Information eXchange messaging standard; FMX UST supports FIX 4.4 with selected FIX 5.0 tags.
+      - term: ITCH
+        definition: Binary market data dissemination protocol originally from Nasdaq; used by Fenics FX for tick-by-tick quote distribution.
+      - term: OUCH
+        definition: Binary order entry protocol paired with ITCH on Fenics FX.
+      - term: SoupBinTCP
+        definition: Reliable TCP session-layer protocol used to deliver ITCH messages over a single TCP/IP connection.
+      - term: BOP
+        definition: Binary Order Protocol — FMX UST's proprietary binary order-entry message format transmitted over TCP/IP.
+      - term: BIMP
+        definition: Binary Market Data Protocol — FMX UST's real-time market data feed delivered over multicast.
+      - term: Drop Copy
+        definition: Subscription service that broadcasts a copy of all execution and order activity for risk, compliance and post-trade systems.
+      - term: STP
+        definition: Straight-Through-Processing — automated capture and enrichment of trade economics, settlement data and fees.
+
+  - name: Market Data
+    terms:
+      - term: Fenics Market Data
+        definition: The exclusive data distributor of BGC Group and its affiliates; provides streaming, intra-day, end-of-day and historical market data across multiple asset classes.
+      - term: Pricing/Modelled
+        definition: Curve- and surface-based pricing data derived from broker inputs and analytics, suited to risk and valuation use cases.
+      - term: Orderbook/Level 2
+        definition: Consolidated quote, order and trade data preserving order-book depth and microstructure.
+      - term: Direct Feed
+        definition: Low-latency push delivery of market data over network connectivity such as FIX, ITCH, or binary multicast.
+      - term: Historical Data
+        definition: Time-series archives of price, quote and trade data — Fenics offers FX history back to 2005.
+      - term: Regulatory Solutions
+        definition: Fenics product family for surveillance, valuations, prudent valuation, independent price verification and trading-book review.
+
+  - name: Asset Classes
+    terms:
+      - term: Foreign Exchange
+        definition: Spot, forwards, non-deliverable forwards and options on currency pairs; Fenics covers 350+ pairs.
+      - term: Interest Rate Derivatives
+        definition: Linear products (swaps, OIS, cross-currency) and non-linear products (swaptions, caps/floors) across 30+ currencies and 290+ curves at Fenics.
+      - term: Inflation Derivatives
+        definition: Asset swaps, inflation swaps, caps/floors and inflation-linked bonds.
+      - term: Fixed Income
+        definition: U.S. Treasuries, global government bonds, corporate bonds and credit default swaps.
+      - term: Energy And Commodities
+        definition: Crude oil, natural gas, power, agricultural products, metals and weather derivatives across physical and financial markets.
+      - term: Equity Derivatives
+        definition: Options and structured products on single names and indices.
+      - term: SOFR
+        definition: Secured Overnight Financing Rate — the U.S. risk-free reference rate; SOFR futures were the inaugural FMX Futures Exchange contract.
+
+  - name: Post-Trade And Infrastructure
+    terms:
+      - term: Capitalab
+        definition: BGC's post-trade optimization business performing initial margin optimization, risk reduction and compression runs across cleared and bilateral derivatives portfolios.
+      - term: Initial Margin Optimization
+        definition: A coordinated portfolio rebalancing exercise that reduces initial margin requirements at central counterparties while keeping market risk unchanged.
+      - term: Lucera
+        definition: BGC's financial technology subsidiary providing software-defined connectivity (Connect), on-demand infrastructure (Compute) and cross-asset trading (LumeMarkets/LumeFX).
+      - term: LumeMarkets
+        definition: Lucera's high-performance, low-latency cross-asset trading platform exposing a single API across FX, Rates, Futures, Crypto and Credit.
+      - term: SDN
+        definition: Software-Defined Networking — the model underpinning Lucera Connect's programmable connectivity fabric for financial venues.

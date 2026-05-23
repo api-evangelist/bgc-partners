@@ -1,0 +1,87 @@
+name: BGC Group Plans And Pricing
+description: |
+  Commercial offering surface for BGC Group products across FMX execution venues, Fenics Market Data,
+  Lucera trading infrastructure, and Capitalab post-trade optimization. BGC does not publish self-service
+  developer pricing; every channel is sales-onboarded with negotiated terms based on counterparty type,
+  asset class, volume, and connectivity profile. The plans below are descriptive of the commercial model,
+  not a public rate card.
+url: https://github.com/api-evangelist/bgc-partners/blob/main/plans/bgc-partners-plans-pricing.yml
+specificationVersion: API Commons Plans 0.1
+created: '2026-05-23'
+modified: '2026-05-23'
+provider:
+  name: BGC Group, Inc.
+  url: https://www.bgcg.com
+
+plans:
+  - id: fmx-futures-exchange-membership
+    name: FMX Futures Exchange Membership
+    audience: Banks, broker-dealers, market makers, prop trading firms
+    surface: FMX Futures Exchange
+    description: |
+      Trading participation on the FMX Futures Exchange, including SOFR and U.S. Treasury futures, with
+      access to FIX connectivity, market data, drop copy, and clearing through LCH Limited. Membership and
+      transaction economics are negotiated; LCH cross-margining with cleared interest rate swaps is a key
+      capital-savings benefit.
+    pricingModel: Negotiated execution fees plus member/clearing economics
+    contact: https://www.fmxfutures.com/contact/
+    publicPriceList: false
+  - id: fmx-ust-execution
+    name: FMX UST Execution
+    audience: U.S. Treasury market dealers, banks and prop trading firms
+    surface: FMX UST CLOB
+    description: |
+      Central limit order book execution in U.S. Treasuries via FIX 4.4 or proprietary BOP/BIMP binary
+      feeds, including Drop Copy and STP services. Pricing is per-trade, negotiated by counterparty.
+    pricingModel: Per-trade execution fees, negotiated
+    contact: https://www.fenicsust.com/contact/
+    publicPriceList: false
+  - id: fmx-fx-execution
+    name: FMX FX Execution
+    audience: FX dealers, banks, hedge funds, asset managers
+    surface: Fenics FX Spot / Forwards / NDF / Options
+    description: |
+      Electronic FX execution across spot, forwards, NDFs and options with FIX or ITCH/OUCH integration.
+      Commercials are negotiated by relationship and asset coverage.
+    pricingModel: Negotiated execution fees
+    contact: https://www.fenicsfx.com/contact/
+    publicPriceList: false
+  - id: fenics-market-data-subscription
+    name: Fenics Market Data Subscription
+    audience: Buy-side, sell-side, vendors, risk and valuation teams
+    surface: Fenics Market Data (FX, Rates, Inflation, Fixed Income, Energy/Commodities, Equity Derivatives)
+    description: |
+      Subscription access to Fenics market data with packages tailored by asset class, delivery channel
+      (Direct Feed/API, Desktop, Excel, Cloud, FTP/SFTP, On-prem Server), frequency (streaming, intra-day,
+      end-of-day, historical) and licensed use (internal, display, redistribution). Distributed directly
+      and via partners such as LSEG Workspace.
+    pricingModel: Per-package subscription with channel, frequency and license-tier modifiers
+    contact: https://www.fenicsmd.com/contact-us/
+    publicPriceList: false
+  - id: lucera-platform
+    name: Lucera Platform
+    audience: Trading firms, exchanges, brokers
+    surface: Lucera Connect, Lucera Compute, LumeMarkets, LumeFX
+    description: |
+      Software-defined connectivity (Connect), on-demand compute infrastructure, and the LumeMarkets
+      single-API cross-asset trading platform spanning FX, Rates, Futures, Crypto and Credit. Pricing
+      bundles connectivity, hosting, and API entitlements.
+    pricingModel: Bundled platform pricing with venue and capacity components
+    contact: https://www.lucera.com/contact/
+    publicPriceList: false
+  - id: capitalab-optimization
+    name: Capitalab Optimization Runs
+    audience: Banks and dealers with cleared and bilateral derivatives portfolios
+    surface: Capitalab compression and IM optimization service
+    description: |
+      Periodic, multi-bank initial-margin optimization and compression runs across interest rate, FX,
+      inflation and credit derivatives portfolios. Commercials are typically per-run plus annual program
+      participation.
+    pricingModel: Per-run / annual program fees, negotiated
+    contact: https://www.capitalab.com/contact/
+    publicPriceList: false
+
+notes:
+  - All BGC product surfaces require KYC/AML onboarding, regulatory eligibility checks, and connectivity provisioning before live access.
+  - No self-service tier, free tier, or developer sandbox is publicly advertised across BGC, FMX, Fenics, Lucera, or Capitalab.
+  - Where third-party platforms (e.g., LSEG Workspace) distribute Fenics data, those carriers' pricing applies on top of Fenics licensing.

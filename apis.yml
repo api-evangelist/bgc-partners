@@ -1,0 +1,282 @@
+name: BGC Group
+description: |
+  BGC Group, Inc. (NASDAQ: BGC), formerly BGC Partners, is a global brokerage and financial technology firm.
+  Headquartered in New York and London, BGC operates electronic and voice broking across foreign exchange,
+  interest rate derivatives, fixed income, energy and commodities, equity derivatives, credit, and futures.
+  Its technology portfolio includes the FMX division (FMX UST, FMX FX, and FMX Futures Exchange — launched
+  September 23, 2024 for SOFR futures), Fenics Market Data (the exclusive data distributor for BGC and its
+  affiliates), Capitalab (post-trade optimization), Lucera (LumeMarkets cross-asset trading platform and
+  Lucera Connect/Compute infrastructure), and GFI Group. BGC spun off Newmark Group (NASDAQ: NMRK) on
+  November 30, 2018. Public developer documentation is generally gated behind sales engagement; protocol
+  specifications (FIX, ITCH/SoupBinTCP, BIMP, BOP) exist for institutional clients.
+url: https://www.bgcg.com
+image: https://www.bgcg.com/wp-content/uploads/2023/06/BGC-Group-Logo.svg
+humanURL: https://www.bgcg.com
+specificationVersion: '0.18'
+type: Index
+aid: bgc-partners
+access: 3rd-Party
+created: '2026-05-05'
+modified: '2026-05-23'
+tags:
+  - Brokerage
+  - Inter-Dealer Broker
+  - Financial Services
+  - Capital Markets
+  - Market Data
+  - Foreign Exchange
+  - Fixed Income
+  - Interest Rate Derivatives
+  - Energy And Commodities
+  - Equity Derivatives
+  - Credit Derivatives
+  - Futures Exchange
+  - SOFR
+  - US Treasuries
+  - Post-Trade
+  - Trading Infrastructure
+  - Financial Technology
+  - Fortune 1000
+maintainers:
+  - FN: API Evangelist
+    email: info@apievangelist.com
+apis:
+  - name: FMX Futures Exchange Connectivity
+    description: |
+      FMX Futures Exchange launched September 23, 2024, initially listing SOFR futures (the largest notional
+      futures contract in the world) and adding U.S. Treasury futures in Q1 2025. Equity partners include
+      Bank of America, Barclays, Citadel Securities, Citi, Goldman Sachs, J.P. Morgan, Jump Trading Group,
+      Morgan Stanley, Tower Research Capital, and Wells Fargo. The exchange clears through LCH Limited. The
+      platform represents "over $200 million of technological investment." Native connectivity is provided to
+      institutional members via FIX protocol and proprietary binary feeds; specifications are distributed to
+      onboarded participants.
+    humanURL: https://www.fmxfutures.com
+    baseURL: https://www.fmxfutures.com
+    image: https://www.fmxfutures.com/favicon.ico
+    aid: bgc-partners:fmx-futures
+    tags:
+      - Futures Exchange
+      - SOFR
+      - US Treasuries
+      - FIX Protocol
+      - Market Data
+      - Derivatives
+    properties:
+      - type: Portal
+        url: https://www.fmxfutures.com
+      - type: Documentation
+        url: https://www.fmx.com/wp-content/uploads/2024/06/FMX-Futures-Exchange-Overview-June-2024-1.pdf
+      - type: PressRelease
+        url: https://www.prnewswire.com/news-releases/bgc-group-launches-fmx-futures-exchange-302256660.html
+  - name: FMX UST
+    description: |
+      FMX UST (formerly Fenics UST) is BGC's electronic trading venue for U.S. Treasuries. Connectivity is a
+      "point-to-point service based on industry standards TCP/IP and the FIX Protocol." Supports FIX 4.4 with
+      selected FIX 5.0 tags; proprietary BOP (Binary Order Protocol) over TCP for order entry; BIMP (Binary
+      Market Data Protocol) over multicast for market data; Drop Copy and STP services. Order book depth of
+      10 price levels in increments of 1/16 of a 32nd.
+    humanURL: https://www.fenicsust.com
+    baseURL: https://www.fenicsust.com
+    aid: bgc-partners:fmx-ust
+    tags:
+      - US Treasuries
+      - Electronic Trading
+      - FIX Protocol
+      - Binary Protocol
+      - Market Data
+      - Central Limit Order Book
+    properties:
+      - type: Portal
+        url: https://www.fenicsust.com
+      - type: Documentation
+        url: https://www.fenicsust.com/technology/
+  - name: FMX FX (Fenics FX)
+    description: |
+      FMX FX (operating as Fenics FX) is BGC's electronic foreign exchange platform covering Spot, Forwards,
+      NDFs and Options. Integration is offered via FIX (order entry) and ITCH/OUCH (market data and order
+      entry) protocols. The Fenics FX ITCH market data service uses SoupBinTCP on top of TCP for session
+      control and delivers tick-by-tick quote updates over a single TCP/IP connection.
+    humanURL: https://www.fenicsfx.com
+    baseURL: https://www.fenicsfx.com
+    aid: bgc-partners:fmx-fx
+    tags:
+      - Foreign Exchange
+      - FX Spot
+      - FX Forwards
+      - NDF
+      - FX Options
+      - FIX Protocol
+      - ITCH
+      - OUCH
+      - SoupBinTCP
+      - Market Data
+    properties:
+      - type: Portal
+        url: https://www.fenicsfx.com
+      - type: Documentation
+        url: https://www.fenicsfx.com/wp-content/uploads/2018/01/FenicsFX_ITCH_MarketData.pdf
+      - type: Specification
+        url: https://www.fenicsfx.com/wp-content/uploads/2019/09/FenicsFX_ITCH_MarketData_v7.pdf
+  - name: Fenics Market Data
+    description: |
+      Fenics Market Data (FMD) is the exclusive data distributor of BGC Group, Inc. and its affiliates. FMD
+      provides streaming, intra-day, end-of-day and historical market data across Foreign Exchange (350+
+      currency pairs with history from 2005), Interest Rate Derivatives (30+ currencies, 290+ curves), Fixed
+      Income (US Treasuries, global government bonds, corporate bonds, CDS), Inflation Derivatives, Energy &
+      Commodities, and Equity Derivatives. Delivery formats include Pricing/Modelled curves and surfaces and
+      Orderbook/Level 2 consolidated quotes. Distribution channels include "API, Desktop, Excel, Cloud, FTP,
+      SFTP, and Deployed/Onsite Servers" with FIX/API and binary protocols for low-latency feeds.
+    humanURL: https://www.fenicsmd.com
+    baseURL: https://www.fenicsmd.com
+    aid: bgc-partners:fenics-market-data
+    tags:
+      - Market Data
+      - Reference Data
+      - Historical Data
+      - Pricing
+      - Curves And Surfaces
+      - Level 2
+      - Foreign Exchange
+      - Interest Rates
+      - Fixed Income
+      - Energy And Commodities
+      - Inflation
+      - Regulatory Solutions
+    properties:
+      - type: Portal
+        url: https://www.fenicsmd.com
+      - type: Products
+        url: https://www.fenicsmd.com/products/
+      - type: DirectFeedAndAPI
+        url: https://www.fenicsmd.com/delivery/direct-feed-and-api/
+      - type: Distribution
+        url: https://www.lseg.com/en/data-analytics/financial-data/pricing-and-market-data/fixed-income-pricing-data/fenics-market-data
+  - name: Lucera LumeMarkets
+    description: |
+      Lucera is BGC's financial technology subsidiary offering a "high-performance, low latency platform that
+      provides a single API for aggregating and trading across multiple markets – FX, Rates, Futures, Crypto,
+      and Credit." Product portfolio: Connect (SDN connectivity), Compute (on-demand infrastructure),
+      LumeMarkets (cross-asset trading platform), and LumeFX (FX-focused offering). The single-API
+      cross-asset trading surface is the most explicit programmatic API in the BGC family.
+    humanURL: https://www.lucera.com
+    baseURL: https://www.lucera.com
+    aid: bgc-partners:lucera
+    tags:
+      - Trading Infrastructure
+      - Cross-Asset Trading
+      - Aggregation
+      - SDN
+      - Low Latency
+      - FX
+      - Rates
+      - Futures
+      - Crypto
+      - Credit
+      - Single API
+    properties:
+      - type: Portal
+        url: https://www.lucera.com
+  - name: Capitalab
+    description: |
+      Capitalab is BGC's post-trade compression, optimization and risk-mitigation arm. It executes initial
+      margin optimization runs across interest rate, FX, inflation and credit derivatives portfolios for
+      banks and dealers, integrating with central counterparty clearing houses and bilateral OTC books.
+      Programmatic engagement is operated through Capitalab's bespoke onboarding rather than a public API.
+    humanURL: https://www.capitalab.com
+    baseURL: https://www.capitalab.com
+    aid: bgc-partners:capitalab
+    tags:
+      - Post-Trade
+      - Compression
+      - Initial Margin Optimization
+      - Risk Mitigation
+      - Derivatives
+      - Rates
+      - Credit
+      - FX
+    properties:
+      - type: Portal
+        url: https://www.capitalab.com
+  - name: GFI Group
+    description: |
+      GFI Group, Inc. is a wholly owned BGC subsidiary — "a leading intermediary and provider of trading
+      technologies and support services to the global OTC and listed markets." GFI offers voice and
+      electronic brokerage in fixed income, FX, energy, credit and equity derivatives, along with software
+      such as Trayport (now divested) historically and Fenics-branded data and analytics today.
+    humanURL: https://www.gfigroup.com
+    baseURL: https://www.gfigroup.com
+    aid: bgc-partners:gfi-group
+    tags:
+      - Inter-Dealer Broker
+      - OTC Markets
+      - Voice Broking
+      - Electronic Broking
+      - Trading Technology
+    properties:
+      - type: Portal
+        url: https://www.gfigroup.com
+common:
+  - type: Portal
+    url: https://www.bgcg.com
+  - type: InvestorRelations
+    url: https://ir.bgcg.com
+  - type: PressReleases
+    url: https://www.bgcg.com/press-releases/
+  - type: News
+    url: https://www.bgcg.com/news/
+  - type: Careers
+    url: https://www.bgcg.com/careers/
+  - type: Contact
+    url: https://www.bgcg.com/contact/
+  - type: PrivacyPolicy
+    url: https://www.bgcg.com/privacy-policy/
+  - type: TermsOfUse
+    url: https://www.bgcg.com/terms-of-use/
+  - type: SECFilings
+    url: https://ir.bgcg.com/financials/sec-filings/
+  - type: AnnualReports
+    url: https://ir.bgcg.com/financials/annual-reports/
+  - type: StockTicker
+    url: https://ir.bgcg.com/stock-info/stock-quote/
+    data:
+      exchange: NASDAQ
+      symbol: BGC
+  - type: SpinOff
+    url: https://www.nmrk.com
+    data:
+      name: Newmark Group
+      ticker: NMRK
+      completed: '2018-11-30'
+  - type: Subsidiary
+    url: https://www.fmx.com
+    data:
+      name: FMX Holdings
+      launched: '2024-09-23'
+      equityPartners:
+        - Bank of America
+        - Barclays
+        - Citadel Securities
+        - Citi
+        - Goldman Sachs
+        - J.P. Morgan
+        - Jump Trading Group
+        - Morgan Stanley
+        - Tower Research Capital
+        - Wells Fargo
+  - type: ClearingPartner
+    url: https://www.lch.com
+    data:
+      name: LCH Limited
+      relationship: FMX Futures Exchange clearing
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/bgc-group/
+  - type: Vocabulary
+    url: vocabulary/bgc-partners-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/bgc-partners-context.jsonld
+  - type: Plans
+    url: plans/bgc-partners-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/bgc-partners-rate-limits.yml
+  - type: FinOps
+    url: finops/bgc-partners-finops.yml

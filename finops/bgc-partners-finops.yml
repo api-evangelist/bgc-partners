@@ -1,0 +1,97 @@
+name: BGC Group FinOps Surface
+description: |
+  FinOps-aligned view of BGC Group's billable surface across execution venues, market data, trading
+  infrastructure and post-trade optimization. BGC's cost-to-serve is enterprise-relationship driven —
+  there is no consumption-priced developer API. Cost dimensions below map BGC's commercial primitives to
+  the FinOps Framework's billing/usage/charges concepts (FOCUS-style) so consumers can model BGC spend
+  alongside other capital-markets vendor spend.
+url: https://github.com/api-evangelist/bgc-partners/blob/main/finops/bgc-partners-finops.yml
+specificationVersion: API Commons FinOps 0.1 (FOCUS-aligned)
+created: '2026-05-23'
+modified: '2026-05-23'
+provider:
+  name: BGC Group, Inc.
+  url: https://www.bgcg.com
+
+billableSurfaces:
+  - id: fmx-futures-execution
+    name: FMX Futures Exchange Execution
+    chargeCategory: Usage
+    chargeSubcategory: ExecutionFee
+    pricingUnit: Contract traded
+    description: Per-contract execution fees for SOFR and U.S. Treasury futures listed on FMX Futures Exchange.
+    invoicedBy: FMX Holdings / BGC
+  - id: fmx-futures-clearing
+    name: FMX Futures Clearing
+    chargeCategory: Usage
+    chargeSubcategory: ClearingFee
+    pricingUnit: Contract cleared
+    description: Clearing fees levied by LCH Limited for FMX Futures trades; cross-margining with cleared IRS may reduce IM requirements.
+    invoicedBy: LCH Limited
+  - id: fmx-ust-execution
+    name: FMX UST Execution
+    chargeCategory: Usage
+    chargeSubcategory: ExecutionFee
+    pricingUnit: Trade notional / per trade
+    description: U.S. Treasury cash execution fees on the FMX UST CLOB.
+    invoicedBy: BGC
+  - id: fmx-fx-execution
+    name: FMX FX Execution
+    chargeCategory: Usage
+    chargeSubcategory: ExecutionFee
+    pricingUnit: Trade notional
+    description: Foreign exchange execution fees for spot, forwards, NDFs and options across the Fenics FX venue.
+    invoicedBy: BGC
+  - id: fenics-md-subscription
+    name: Fenics Market Data Subscription
+    chargeCategory: Subscription
+    chargeSubcategory: DataLicense
+    pricingUnit: Subscription tier
+    description: Annual or monthly subscription per asset-class package, per delivery channel (Direct Feed/API, Desktop, Excel, Cloud, FTP/SFTP), and per license type (display, non-display, redistribution).
+    invoicedBy: Fenics Market Data / BGC
+  - id: fenics-md-historical
+    name: Fenics Historical Data Access
+    chargeCategory: Subscription
+    chargeSubcategory: HistoricalDataLicense
+    pricingUnit: Asset-class package / period
+    description: One-off or recurring fees for historical time series (FX history available from 2005) across covered asset classes.
+    invoicedBy: Fenics Market Data / BGC
+  - id: lucera-platform-fee
+    name: Lucera Platform Fee
+    chargeCategory: Subscription
+    chargeSubcategory: PlatformService
+    pricingUnit: Tenant / capacity
+    description: Lucera Connect (SDN), Compute (infra), LumeMarkets/LumeFX (single-API aggregator) bundled by tenant and capacity.
+    invoicedBy: Lucera / BGC
+  - id: lucera-connectivity-passthrough
+    name: Lucera Venue Connectivity Pass-through
+    chargeCategory: Usage
+    chargeSubcategory: NetworkConnectivity
+    pricingUnit: Cross-connect / port
+    description: Per-venue cross-connects and ports brokered through Lucera Connect; venue / colo charges are passed through.
+    invoicedBy: Lucera / Venue
+  - id: capitalab-program
+    name: Capitalab Compression Program
+    chargeCategory: Subscription + Usage
+    chargeSubcategory: PostTradeService
+    pricingUnit: Annual seat + per-run fee
+    description: Annual program participation plus per-run fees for IM optimization and compression cycles across rates, FX, inflation and credit portfolios.
+    invoicedBy: Capitalab / BGC
+
+allocation:
+  costCenters:
+    - Trading / Front Office (execution fees)
+    - Market Data / Reference Data (subscriptions)
+    - Infrastructure (Lucera connectivity and compute)
+    - Risk / Treasury (clearing and IM optimization)
+  tags:
+    - asset_class
+    - venue
+    - desk
+    - book
+    - legal_entity
+
+reportingNotes:
+  - BGC does not publish FOCUS-compliant CSV exports; invoices and statements are bilateral PDFs and per-broker statements.
+  - Clearing fees from LCH are billed separately from FMX execution fees and should be modeled as distinct cost line items.
+  - Fenics Market Data display / non-display / redistribution use is a primary audit dimension; reconcile entitlements with vendor reports quarterly.

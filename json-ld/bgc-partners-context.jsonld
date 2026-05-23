@@ -1,0 +1,103 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "bgc": "https://www.bgcg.com/ns/",
+    "fmx": "https://www.fmx.com/ns/",
+    "fenics": "https://www.fenicsmd.com/ns/",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "logo": "schema:logo",
+    "tickerSymbol": "schema:tickerSymbol",
+    "foundingDate": "schema:foundingDate",
+    "parentOrganization": "schema:parentOrganization",
+    "subOrganization": "schema:subOrganization",
+    "Organization": "schema:Organization",
+    "Corporation": "schema:Corporation",
+    "FinancialService": "schema:FinancialService",
+    "FinancialProduct": "schema:FinancialProduct",
+    "ExchangeRateSpecification": "schema:ExchangeRateSpecification",
+    "BGCGroup": "bgc:BGCGroup",
+    "InterDealerBroker": "bgc:InterDealerBroker",
+    "BrokerageBrand": "bgc:BrokerageBrand",
+    "MarketDataProduct": "fenics:MarketDataProduct",
+    "DeliveryChannel": "fenics:DeliveryChannel",
+    "AssetClass": "fenics:AssetClass",
+    "FuturesExchange": "fmx:FuturesExchange",
+    "TradingVenue": "fmx:TradingVenue",
+    "FuturesContract": "fmx:FuturesContract",
+    "ConnectivityProtocol": "fmx:ConnectivityProtocol",
+    "FIXProtocol": "fmx:FIXProtocol",
+    "ITCHProtocol": "fmx:ITCHProtocol",
+    "OUCHProtocol": "fmx:OUCHProtocol",
+    "SoupBinTCP": "fmx:SoupBinTCP",
+    "BinaryOrderProtocol": "fmx:BinaryOrderProtocol",
+    "BinaryMarketDataProtocol": "fmx:BinaryMarketDataProtocol",
+    "DropCopyService": "fmx:DropCopyService",
+    "STPService": "fmx:STPService",
+    "ClearingHouse": "fmx:ClearingHouse",
+    "EquityPartner": "fmx:EquityPartner",
+    "PostTradeService": "bgc:PostTradeService",
+    "MarginOptimization": "bgc:MarginOptimization",
+    "TradingInfrastructure": "bgc:TradingInfrastructure",
+    "SoftwareDefinedNetwork": "bgc:SoftwareDefinedNetwork",
+    "ticker": "schema:tickerSymbol",
+    "exchange": "schema:exchange",
+    "ric": "fenics:ric",
+    "isin": "fenics:isin",
+    "cusip": "fenics:cusip"
+  },
+  "@type": "Corporation",
+  "@id": "https://www.bgcg.com/#org",
+  "name": "BGC Group, Inc.",
+  "description": "Global brokerage and financial technology firm operating in OTC and listed markets across foreign exchange, interest rate derivatives, fixed income, energy, commodities, equity derivatives, credit and futures.",
+  "url": "https://www.bgcg.com",
+  "tickerSymbol": "BGC",
+  "exchange": "NASDAQ",
+  "subOrganization": [
+    {
+      "@type": "FuturesExchange",
+      "@id": "https://www.fmxfutures.com/#exchange",
+      "name": "FMX Futures Exchange",
+      "url": "https://www.fmxfutures.com",
+      "foundingDate": "2024-09-23"
+    },
+    {
+      "@type": "TradingVenue",
+      "@id": "https://www.fenicsust.com/#venue",
+      "name": "FMX UST",
+      "url": "https://www.fenicsust.com"
+    },
+    {
+      "@type": "TradingVenue",
+      "@id": "https://www.fenicsfx.com/#venue",
+      "name": "FMX FX",
+      "url": "https://www.fenicsfx.com"
+    },
+    {
+      "@type": "MarketDataProduct",
+      "@id": "https://www.fenicsmd.com/#product",
+      "name": "Fenics Market Data",
+      "url": "https://www.fenicsmd.com"
+    },
+    {
+      "@type": "TradingInfrastructure",
+      "@id": "https://www.lucera.com/#infra",
+      "name": "Lucera",
+      "url": "https://www.lucera.com"
+    },
+    {
+      "@type": "PostTradeService",
+      "@id": "https://www.capitalab.com/#svc",
+      "name": "Capitalab",
+      "url": "https://www.capitalab.com"
+    },
+    {
+      "@type": "InterDealerBroker",
+      "@id": "https://www.gfigroup.com/#org",
+      "name": "GFI Group",
+      "url": "https://www.gfigroup.com"
+    }
+  ]
+}
