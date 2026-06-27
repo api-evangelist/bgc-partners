@@ -230,7 +230,7 @@ common:
     url: https://www.bgcg.com/contact/
   - type: PrivacyPolicy
     url: https://www.bgcg.com/privacy-policy/
-  - type: TermsOfUse
+  - type: TermsOfService
     url: https://www.bgcg.com/terms-of-use/
   - type: SECFilings
     url: https://ir.bgcg.com/financials/sec-filings/
