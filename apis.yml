@@ -216,6 +216,10 @@ apis:
       - type: Portal
         url: https://www.gfigroup.com
 common:
+  - type: VulnerabilityDisclosure
+    url: security/bgc-partners-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/bgc-partners-domain-security.yml
   - type: Portal
     url: https://www.bgcg.com
   - type: InvestorRelations
