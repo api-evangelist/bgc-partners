@@ -10,6 +10,17 @@ description: |
   November 30, 2018. Public developer documentation is generally gated behind sales engagement; protocol
   specifications (FIX, ITCH/SoupBinTCP, BIMP, BOP) exist for institutional clients.
 url: https://www.bgcg.com
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: unknown
