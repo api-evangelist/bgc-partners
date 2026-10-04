@@ -44,7 +44,7 @@ modified: '2026-05-23'
 tags:
   - Brokerage
   - Inter-Dealer Broker
-  - Financial-Services
+  - Financial Services
   - Capital Markets
   - Market Data
   - Foreign Exchange
@@ -79,6 +79,7 @@ tags_raw:
   - Trading Infrastructure
   - Financial Technology
   - Fortune 1000
+  - Financial-Services
 maintainers:
   - FN: API Evangelist
     email: info@apievangelist.com
