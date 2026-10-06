@@ -40,7 +40,7 @@ type: Index
 aid: bgc-partners
 access: 3rd-Party
 created: '2026-05-05'
-modified: '2026-05-23'
+modified: '2026-10-06'
 tags:
   - Brokerage
   - Inter-Dealer Broker
@@ -259,6 +259,8 @@ apis:
       - type: Portal
         url: https://www.gfigroup.com
 common:
+  - url: https://www.fmxfutures.com/feed/
+    type: BlogRSS
   - type: VulnerabilityDisclosure
     url: security/bgc-partners-vulnerability-disclosure.yml
   - type: DomainSecurity
