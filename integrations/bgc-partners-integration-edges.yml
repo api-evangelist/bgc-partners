@@ -1,0 +1,63 @@
+edges:
+- partner_name: ISO 10383 (MIC)
+  partner: null
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv
+  source: mic
+  category: registered trading venues and market segments
+  contract_reference:
+    register: ISO 10383 Market Identifier Codes (ISO 20022 registration authority)
+    spec_file: null
+    standard: ISO 10383
+    role: venue operator
+    matched_domain: bgcg.com
+    matched_by: domain+verified:bgcg.com
+    categories:
+    - OTFS
+    - OTHR
+    - RMOS
+    operating_mics:
+    - AURB
+    - BGCJ
+    - BGSG
+    - FMXS
+    mics:
+    - mic: OBGP
+      operating_mic: AURB
+      segment: SGMT
+      market: AUREL BGC - OB ENERGY
+      category: OTFS
+      legal_name: AUREL BGC
+      country: FR
+    - mic: BGCJ
+      operating_mic: BGCJ
+      segment: OPRT
+      market: BGC SHOKEN KAISHA LTD – ETP
+      category: OTHR
+      legal_name: BGC SHOKEN KAISHA LTD
+      country: JP
+    - mic: BGSG
+      operating_mic: BGSG
+      segment: OPRT
+      market: BGC PARTNERS SINGAPORE RMO
+      category: RMOS
+      legal_name: BGC PARTNERS (SINGAPORE) LIMITED
+      country: SG
+    - mic: FMXS
+      operating_mic: FMXS
+      segment: OPRT
+      market: FMX SECURITIES
+      category: RMOS
+      legal_name: FMX SECURITIES (SINGAPORE) PTE. LIMITED
+      country: SG
+    detected_by: sweep-capital-markets.py
+    detected: '2026-10-15'
+  detected_by: sweep-capital-markets.py
+  first_seen: '2026-10-15'
+generated: '2026-10-15'
+method: searched
+checked:
+- https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv
