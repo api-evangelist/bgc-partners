@@ -64,89 +64,86 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-API Evangelist network profile for **BGC Group, Inc.** (NASDAQ: **BGC**) — global brokerage and financial technology firm, formerly **BGC Partners**. Headquartered in New York and London, BGC operates electronic and voice broking across foreign exchange, interest rate derivatives, fixed income, energy and commodities, equity derivatives, credit, and futures, alongside the Fenics market-data franchise, the FMX execution venues, Lucera trading infrastructure, Capitalab post-trade optimization, and the GFI Group subsidiary.
+BGC Group, Inc. (NASDAQ: BGC), formerly BGC Partners, is a global brokerage and financial technology firm. Headquartered in New York and London, BGC operates electronic and voice broking across foreign exchange, interest rate derivatives, fixed income, energy and commodities, equity derivatives, credit, and futures. Its technology portfolio includes the FMX division (FMX UST, FMX FX, and FMX Futures Exchange — launched September 23, 2024 for SOFR futures), Fenics Market Data (the exclusive data distributor for BGC and its affiliates), Capitalab (post-trade optimization), Lucera (LumeMarkets cross-asset trading platform and Lucera Connect/Compute infrastructure), and GFI Group. BGC spun off Newmark Group (NASDAQ: NMRK) on November 30, 2018. Public developer documentation is generally gated behind sales engagement; protocol specifications (FIX, ITCH/SoupBinTCP, BIMP, BOP) exist for institutional clients.
 
-- **Provider site:** https://www.bgcg.com
-- **Investor relations:** https://ir.bgcg.com
-- **Ticker:** NASDAQ:BGC
-- **Spin-off:** Newmark Group (NASDAQ:NMRK) — completed 2018-11-30
-- **Repo type:** `company`
-- **Profiled:** 2026-05
-- **Fortune 1000:** rank 963
+**Areas:** Brokerage · Inter-Dealer Broker · Financial Services · Capital Markets · Market Data · Foreign Exchange · Fixed Income · Interest Rate Derivatives · Energy And Commodities · Equity Derivatives · Credit Derivatives · Futures Exchange
 
-## Why this profile is brokerage-shaped, not REST-API-shaped
+## BGC Group on APIs.io
 
-BGC is a regulated inter-dealer broker and venue operator. Its "APIs" are session-oriented institutional integrations — **FIX 4.4**, **ITCH/OUCH over SoupBinTCP**, proprietary **BOP/BIMP** binaries, **multicast** market data, **FTP/SFTP/Cloud** data drops — distributed to onboarded counterparties under license. There is no public developer portal, no self-service API key, and no public OpenAPI specification across the BGC, FMX, Fenics, Lucera, or Capitalab properties.
+Everything profiled for BGC Group is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/bgc-partners/](https://apis.io/providers/bgc-partners/)** — or go straight to one of the APIs or properties below.
 
-This repository documents what exists and is publicly verifiable, including the September 23, 2024 launch of the FMX Futures Exchange (initial SOFR futures, U.S. Treasury futures added Q1 2025) and the Fenics FX ITCH market data specification (publicly downloadable PDF).
+### APIs (7)
 
-## APIs documented
+- [FMX Futures Exchange Connectivity](https://apis.io/apis/bgc-partners/fmx-futures/) — FMX Futures Exchange launched September 23, 2024, initially listing SOFR futures (the largest notional futures contract in the world) and adding U.S.…
+- [FMX UST](https://apis.io/apis/bgc-partners/fmx-ust/) — FMX UST (formerly Fenics UST) is BGC's electronic trading venue for U.S. Treasuries. Connectivity is a "point-to-point service based on industry standards…
+- [FMX FX (Fenics FX)](https://apis.io/apis/bgc-partners/fmx-fx/) — FMX FX (operating as Fenics FX) is BGC's electronic foreign exchange platform covering Spot, Forwards, NDFs and Options. Integration is offered via FIX…
+- [Fenics Market Data](https://apis.io/apis/bgc-partners/fenics-market-data/) — Fenics Market Data (FMD) is the exclusive data distributor of BGC Group, Inc. and its affiliates. FMD provides streaming, intra-day, end-of-day and…
+- [Lucera LumeMarkets](https://apis.io/apis/bgc-partners/lucera/) — Lucera is BGC's financial technology subsidiary offering a "high-performance, low latency platform that provides a single API for aggregating and trading…
+- [Capitalab](https://apis.io/apis/bgc-partners/capitalab/) — Capitalab is BGC's post-trade compression, optimization and risk-mitigation arm. It executes initial margin optimization runs across interest rate, FX,…
+- [GFI Group](https://apis.io/apis/bgc-partners/gfi-group/) — GFI Group, Inc. is a wholly owned BGC subsidiary — "a leading intermediary and provider of trading technologies and support services to the global OTC and…
 
-| # | Surface | Type | Connectivity |
-|---|---|---|---|
-| 1 | **FMX Futures Exchange** | Listed futures venue | FIX, binary feeds, drop copy; cleared via LCH Limited |
-| 2 | **FMX UST** | U.S. Treasury CLOB | FIX 4.4 (+selected 5.0), BOP order entry, BIMP multicast MD, Drop Copy, STP |
-| 3 | **FMX FX (Fenics FX)** | FX execution (Spot, Fwd, NDF, Options) | FIX, ITCH/OUCH over SoupBinTCP |
-| 4 | **Fenics Market Data** | Multi-asset market data | Direct Feed/API, Desktop, Excel, Cloud, FTP/SFTP, On-prem |
-| 5 | **Lucera (LumeMarkets / LumeFX / Connect / Compute)** | Single-API cross-asset trading + SDN connectivity | Lucera-managed API across FX, Rates, Futures, Crypto, Credit |
-| 6 | **Capitalab** | Post-trade IM optimization and compression | Bespoke program runs |
-| 7 | **GFI Group** | Subsidiary inter-dealer broker | Voice + electronic broking |
+### Published properties
 
-## FMX Futures Exchange (highlight)
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- **Launched:** September 23, 2024 (SOFR futures)
-- **Added:** U.S. Treasury futures, Q1 2025
-- **Equity partners (10):** Bank of America, Barclays, Citadel Securities, Citi, Goldman Sachs, J.P. Morgan, Jump Trading Group, Morgan Stanley, Tower Research Capital, Wells Fargo
-- **Clearing:** LCH Limited — enables cross-margining with cleared interest rate swaps
-- **Technology investment cited at launch:** > $200 million
+#### JSON-LD (1)
 
-## Repository layout
+Linked-data contexts for the provider's vocabulary.
 
-```
-bgc-partners/
-├── apis.yml                              ← Network index of all BGC surfaces
-├── README.md                             ← This file
-├── vocabulary/
-│   └── bgc-partners-vocabulary.yml       ← Domain terms across corporate, venues, protocols, data, post-trade
-├── json-ld/
-│   └── bgc-partners-context.jsonld       ← schema.org-aligned context for BGC, FMX, Fenics, Lucera, Capitalab
-├── plans/
-│   └── bgc-partners-plans-pricing.yml    ← Commercial plan surface (sales-onboarded; no public rate card)
-├── rate-limits/
-│   └── bgc-partners-rate-limits.yml      ← Session/throughput posture across FIX, ITCH, binary feeds
-└── finops/
-    └── bgc-partners-finops.yml           ← FOCUS-aligned billable surfaces and cost dimensions
-```
+- [Bgc Partners Context](https://apis.io/jsonld/bgc-partners/bgc-partners-context/)
 
-## Artifacts NOT generated (and why)
+#### Vocabulary (1)
 
-- **`openapi/`** — No public OpenAPI specifications are published by BGC, FMX, Fenics, Lucera, or Capitalab. Per the run-pipeline skill, empty/placeholder specs must not be created. Native specs are FIX, ITCH, OUCH, BOP, BIMP — distributed under license rather than as OpenAPI.
-- **`asyncapi/`** — Same rationale; market-data streams use ITCH/BIMP/multicast, not AsyncAPI.
-- **`json-schema/` / `json-structure/`** — No public canonical schemas to extract; entity models live inside FIX dictionaries and proprietary binary specs under NDA.
-- **`examples/`** — No public request/response examples; protocol examples are in the licensed FIX/ITCH specifications.
-- **`rules/`** — No OpenAPI to govern.
-- **`capabilities/`** — No OpenAPI to source Naftiko capability definitions from.
-- **`crd/`** — Not a Kubernetes-native provider.
+The provider's domain terms, defined.
 
-## Key public references
+- [BGC Group Vocabulary](https://apis.io/vocabularies/bgc-partners/bgc-partners-vocabulary/)
 
-- BGC Group corporate site — https://www.bgcg.com
-- BGC investor relations — https://ir.bgcg.com
-- FMX division — https://www.fmx.com
-- FMX Futures Exchange — https://www.fmxfutures.com
-- FMX UST technology — https://www.fenicsust.com/technology/
-- Fenics Market Data — https://www.fenicsmd.com
-- Fenics Market Data products — https://www.fenicsmd.com/products/
-- Fenics Market Data Direct Feed & API — https://www.fenicsmd.com/delivery/direct-feed-and-api/
-- Fenics FX ITCH market data specification (PDF) — https://www.fenicsfx.com/wp-content/uploads/2019/09/FenicsFX_ITCH_MarketData_v7.pdf
-- Lucera (LumeMarkets / Connect / Compute) — https://www.lucera.com
-- Capitalab — https://www.capitalab.com
-- GFI Group — https://www.gfigroup.com
-- LCH (clearing partner for FMX Futures) — https://www.lch.com
-- Newmark Group (2018 spin-off) — https://www.nmrk.com
-- Fenics Market Data on LSEG Workspace — https://www.lseg.com/en/data-analytics/financial-data/pricing-and-market-data/fixed-income-pricing-data/fenics-market-data
-- FMX Futures Exchange launch announcement — https://www.prnewswire.com/news-releases/bgc-group-launches-fmx-futures-exchange-302256660.html
+#### Security (2)
 
-## Maintainer
+Authentication, trust centre, and vulnerability disclosure.
 
-[API Evangelist](https://apievangelist.com) — Kin Lane.
+- [Bgc Partners Domain Security](https://apis.io/security/bgc-partners/bgc-partners-domain-security/)
+- [Bgc Partners Vulnerability Disclosure](https://apis.io/security/bgc-partners/bgc-partners-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Bgc Partners Plans Pricing](https://apis.io/plans/bgc-partners/bgc-partners-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Bgc Partners Rate Limits](https://apis.io/rate-limits/bgc-partners/bgc-partners-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Bgc Partners Finops](https://apis.io/finops/bgc-partners/bgc-partners-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Terms of service](https://www.bgcg.com/terms-of-use/)
+- [Privacy policy](https://www.bgcg.com/privacy-policy/)
+
+## API Evangelist rating
+
+**Unrated** — no public website could be reached for this company, so there was almost nothing to measure and nothing a reader could check.
+
+This is not a score of zero. No rating is published for this company. If that is wrong because something public exists that we missed, say so on this repository or email [info@apievangelist.com](mailto:info@apievangelist.com) and it will be re-run — free, and no justification needed.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for BGC Group: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/bgc-partners/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
